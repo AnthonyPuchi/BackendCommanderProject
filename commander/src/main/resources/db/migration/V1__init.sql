@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS saucer(
   name VARCHAR(100) NOT NULL,
   category VARCHAR(50) NOT NULL,
   price DECIMAL NOT NULL,
-  preparation TIME,
+  preparation VARCHAR(50) NOT NULL,
   PRIMARY KEY (id)
 );
 CREATE TABLE IF NOT EXISTS detail(
