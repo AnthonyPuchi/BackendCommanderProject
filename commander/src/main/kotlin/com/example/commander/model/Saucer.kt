@@ -16,5 +16,5 @@ class Saucer {
     var category: String? = null
     @Column(name= "price")
     var price: BigDecimal? = null
-    var preparation: LocalTime? = null
+    var preparation: String? = null
 }
