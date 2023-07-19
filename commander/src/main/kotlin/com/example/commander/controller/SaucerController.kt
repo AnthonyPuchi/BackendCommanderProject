@@ -1,6 +1,7 @@
 package com.example.commander.controller
 
 import com.example.commander.model.Saucer
+import com.example.commander.model.SaucerView
 import com.example.commander.service.SaucerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
@@ -18,6 +19,11 @@ class SaucerController {
     @GetMapping
     fun list (): ResponseEntity<*> {
         return ResponseEntity(saucerService.list(), HttpStatus.OK)
+    }
+
+    @GetMapping("/proteins-saucer")
+    fun listProteinsSaucer ():List<SaucerView>{
+        return  saucerService.listProteinsSaucer()
     }
 
     @PostMapping
