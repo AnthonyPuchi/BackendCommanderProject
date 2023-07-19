@@ -43,9 +43,7 @@ CREATE TABLE IF NOT EXISTS detail(
 CREATE TABLE IF NOT EXISTS proteins (
   id SERIAL,
   name VARCHAR(100) NOT NULL,
-  type VARCHAR(50) NOT NULL,
-  origin VARCHAR(50) NOT NULL,
-  amount_protein DECIMAL NOT NULL,
+  quantity VARCHAR(50) NOT NULL,
   PRIMARY KEY (id)
 );
 CREATE TABLE IF NOT EXISTS saucer_proteins (
@@ -55,3 +53,4 @@ CREATE TABLE IF NOT EXISTS saucer_proteins (
   FOREIGN KEY (saucer_id) REFERENCES saucer (id),
   FOREIGN KEY (proteins_id) REFERENCES proteins (id)
 );
+
